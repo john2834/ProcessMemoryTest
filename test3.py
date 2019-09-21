@@ -26,7 +26,7 @@ pid = 7664
 processHandle = OpenProcess(0x10, False, pid)
 print(processHandle)
 
-addr = 0x5101F395
+addr = 0x994C53B8
 data = c.c_ulonglong()
 OneMemory = ReadProcessMemory(processHandle, addr, c.byref(data), 4, None)
 print('讀出內容：{} ({})'.format(data.value,OneMemory))
